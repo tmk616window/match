@@ -1,0 +1,15 @@
+<h1>match</h1>
+
+<div class='container'>
+<div class='index_tasks_boxes'>
+<%@tasks.each do |t|%>
+<div class='index_tasks_box'>
+<a href="/tasks/<%=t.id%>"></a>
+<%=t.name%><br> 
+<%=t.content%>
+</div>    
+<%end%>
+    
+</div>    
+</div>
+
