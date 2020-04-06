@@ -1,10 +1,9 @@
-
 <div class='container'>
 <div class='row new_users_form'>    
 <div class='new_user_form'>
 <h1>新規登録</h1>
     
-<%=form_with model: @user do |f|%>
+<%=form_with model: @staff do |f|%>
 <p>名前</p>
 <%=f.text_field:name%>
 <p>メールアドレス</p>
