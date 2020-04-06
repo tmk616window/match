@@ -1,13 +1,30 @@
 <h1>match</h1>
 
 <div class='container'>
+    
 <div class='index_tasks_boxes'>
 <%@tasks.each do |t|%>
-<div class='index_tasks_box'>
+<div class='index_tasks_box '>
+    
+<div class='index_tasks_image'>
+<p>box</p>
+</div>
+<div class='index_tasks_form'>
+<h5><%=t.name%></h5>
 <a href="/tasks/<%=t.id%>"></a>
-<%=t.name%><br> 
-<%=t.content%>
+<p>最寄り駅　<%=t.station%></p>
+<p>時間　　　<%=t.time%></p>
+<p>期間　　　<%=t.week%></p>
+<div class='index_tasks_content'>
+<p><%=t.content%></p>
+    
+</div>
 </div>    
+
+
+
+
+</div>
 <%end%>
     
 </div>    
