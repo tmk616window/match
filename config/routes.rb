@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :'staffs'
   resources :'users'
   resources :'tasks'
+  get '/login_form' , to:'login_home#show'
   root to:'login_home#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

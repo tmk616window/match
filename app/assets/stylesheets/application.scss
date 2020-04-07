@@ -16,26 +16,45 @@
 @import "bootstrap";
 
 header{
-    background-color: #FF9999;
-    padding-top:20px;
-    position: fixed;            /* ヘッダーの固定 */
-    top: 0px;                   /* 位置(上0px) */
-    left: 0px;                  /* 位置(右0px) */
-    width: 100%;
-    z-index: 10;
-    /* 横幅100%　*/
+    background-color:red;
+    padding-top: 20px;
+    padding-bottom:15px;
 }
 
-.header_home_button{
+.tasks_button{
+    float:left;
+}
+
+.task_button{
     color:white;
 }
-.header_home_button:hover{
+
+.task_button:hover{
     color:white;
     text-decoration:none;
 }
 
+.sub_button{
+    color:white;
+    margin-right:15px;
+}
+
+.sub_button:hover{
+    color:white;
+    text-decoration:none;
+}
+
+
+.sub_tab{
+    margin-top:13px;
+}
+
+.header_home_button{
+}
+.header_home_button:hover{
+}
+
 body{
-        margin-top:150px;
 }
 
 h1{

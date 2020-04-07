@@ -10,18 +10,33 @@
   </head>
   
     <header>
+      <%if current_user%>
       <div class='container'>
-      <div class="d-flex bd-highlight mb-3">
-      <div class="mr-auto p-2 bd-highlight"><h3><%=link_to 'ボランティア', '#',class:'header_home_button'%></h3></div>
-      <div class='header_list row'>
-      <div class="p-2 bd-highlight"><p><%= link_to "ログイン", '#',class:'login_button'%></p></div>
-      <div class="p-2 bd-highlight"><p><%= link_to "新規登録", '#', class:'sign_up_button'%></p></div>
+        <div class='header_tab row '>
+          <div class='tasks_button col-auto mr-auto'>
+            <h3><%=link_to 'ボランティア' , tasks_path, class:'task_button'%></h3>
+          </div>
+          <div class='sub_tab col-auto'>
+            <%=link_to 'プロフィール' , user_path(current_user.id), class:'sub_button'%>
+            <%=link_to 'ログアウト' , logout_path, method: :delete, class:'sub_button'%>
+          </div>
+        </div>
       </div>
+      <%elsif current_staff%>
+      <%else%>
+      <div class='container'>
+        <div class='header_tab row '>
+          <div class='tasks_button col-auto mr-auto'>
+            <h3><%=link_to 'ボランティア' , tasks_path, class:'task_button'%></h3>
+          </div>
+          <div class='sub_tab col-auto'>
+            <%=link_to 'ログイン' , login_form_path, class:'sub_button'%>
+            <%=link_to '新規登録' , root_path, class:'sub_button'%>
+          </div>
+        </div>
       </div>
-        
-      </div>
-  </header>
-
+      <%end%>
+    </header>
   
   <body>
 

@@ -6,9 +6,9 @@ class StaffsessionsController < ApplicationController
     @staff = Staff.find_by(email: staffsession_params[:email])
     
     if @staff&.authenticate(staffsession_params[:password])
-     staffsession_params[:staff_id] = @staff.id
+     staffsession[:staff_id] = @staff.id
       flash[:success]= 'ログインしました' 
-     redirect_to root_url
+     redirect_to tasks_url
     else
       flash[:danger] = 'メールアドレスかパスワードが間違っています' 
       
