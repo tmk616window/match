@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def index
-    @tasks = Task.all.order(id: "DESC")
+    @tasks = Task.page(params[:page]).per(1).order(id: "DESC")
   end
 
   def show
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
   end
   
   
-  
+  private
   def task_params
     params.require(:task).permit(:name,:content,:time,:week,:station,:address,:user_id)
   end
