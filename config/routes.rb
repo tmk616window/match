@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/detail/:id' , to:'posts#detail'
   get '/staff_login' , to: 'staffsessions#new'
   post '/staff_login', to: 'staffsessions#create'
   delete '/staff_logout' , to:'staffsessions#destroy'

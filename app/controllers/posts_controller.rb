@@ -3,6 +3,10 @@ class PostsController < ApplicationController
     @posts = Post.where(task_id: current_user.id)
   end
   
+  def detail
+    @post = Post.find(params[:id])
+  end
+  
   def show
     @post = Post.new
     @task = Task.find(params[:id])

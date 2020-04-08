@@ -1,5 +1,5 @@
 <h1>メッセージ一覧</h1>
 
 <%@posts.each do |p|%>
-<%=p.content%>
+<a href="/detail/<%=p.id%>"><%=p.content%></a>
 <%end%>
