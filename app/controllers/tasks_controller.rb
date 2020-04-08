@@ -29,7 +29,7 @@ class TasksController < ApplicationController
   
   
   def task_params
-    params.require(:task).permit(:name,:content,:time,:week,:station,:address)
+    params.require(:task).permit(:name,:content,:time,:week,:station,:address,:user_id)
   end
   
 end

@@ -5,5 +5,6 @@ class AddColumnTasks < ActiveRecord::Migration[6.0]
         add_column :tasks, :station, :string
         add_column :tasks, :address, :string
         add_column :tasks, :image, :string
+        add_column :tasks, :user_id, :integer
   end
 end

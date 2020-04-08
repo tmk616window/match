@@ -10,12 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_203357) do
+ActiveRecord::Schema.define(version: 2020_04_08_082706) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "task_id"
+    t.index ["task_id"], name: "index_posts_on_task_id"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -27,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_203357) do
     t.string "week"
     t.string "station"
     t.string "address"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -38,4 +41,5 @@ ActiveRecord::Schema.define(version: 2020_04_07_203357) do
     t.integer "kind"
   end
 
+  add_foreign_key "posts", "tasks"
 end

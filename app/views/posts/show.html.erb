@@ -1,0 +1,7 @@
+<h1>Posts#new</h1>
+<%=@task.user_id%>
+<%=form_with model: @post do |f|%>
+<%= f.hidden_field :task_id, value: @task.user_id %>
+<%=f.text_area:content%>
+<%=f.submit%>
+<%end%>

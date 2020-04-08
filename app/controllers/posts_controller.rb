@@ -1,6 +1,11 @@
 class PostsController < ApplicationController
-  def new
+  def index
+    @posts = Post.where(task_id: current_user.id)
+  end
+  
+  def show
     @post = Post.new
+    @task = Task.find(params[:id])
   end
   
   def create
@@ -11,6 +16,6 @@ class PostsController < ApplicationController
   end
   
   def post_params
-    params.require(:post).permit(:content)
+    params.require(:post).permit(:content,:task_id)
   end
 end
