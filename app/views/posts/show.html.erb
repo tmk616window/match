@@ -1,7 +1,26 @@
-<h1>Posts#new</h1>
-<%=@task.user_id%>
+<div>
+<div class='container'>
+    <div class='row justify-content-center'>
+        <div class='col-5 apply_form'>
+<h1>申し込み</h1>
 <%=form_with model: @post do |f|%>
 <%= f.hidden_field :task_id, value: @task.user_id %>
-<%=f.text_area:content%>
-<%=f.submit%>
-<%end%>
+<%= f.hidden_field :email, value: current_user.email %>
+<p>名前</p>
+<%=f.text_field:name,class:'form-control'%>
+<p >年齢</p>
+<%=f.text_field:old,class:'form-control'%>
+<%=f.radio_button :sex, :'1' %>
+<%=f.label :sex, "男性", {value: :'1', style: "display: inline-block;"} %>
+<%=f.radio_button :sex, :'2' %>
+<%=f.label :sex, "女性", {value: :'2', style: "display: inline-block;"} %>
+<p>コメント</p>
+<%=f.text_area:content,class:'form-control'%><br>
+<%=f.submit 'メッセージを送る' ,class:'form-control btn btn-primary'%>
+<%end%>    
+            
+        </div>
+    </div>
+</div>
+    
+</div>

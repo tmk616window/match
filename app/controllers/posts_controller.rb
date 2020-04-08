@@ -20,6 +20,6 @@ class PostsController < ApplicationController
   end
   
   def post_params
-    params.require(:post).permit(:content,:task_id)
+    params.require(:post).permit(:content,:task_id,:name,:old,:sex,:job,:email)
   end
 end

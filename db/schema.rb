@@ -17,6 +17,11 @@ ActiveRecord::Schema.define(version: 2020_04_08_082706) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "task_id"
+    t.string "name"
+    t.integer "old"
+    t.integer "sex"
+    t.string "job"
+    t.string "email"
     t.index ["task_id"], name: "index_posts_on_task_id"
   end
 
