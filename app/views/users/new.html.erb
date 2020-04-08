@@ -6,13 +6,13 @@
     
 <%=form_with model: @user do |f|%>
 <p>名前</p>
-<%=f.text_field:name%>
+<%=f.text_field:name,class:'form-control'%>
 <p>メールアドレス</p>
-<%=f.text_field:email%>
+<%=f.text_field:email,class:'form-control'%>
 <p>パスワード</p>
-<%=f.password_field:password%>
+<%=f.password_field:password,class:'form-control'%>
 <p>パスワード確認</p>
-<%=f.password_field:password_confirmation%>
+<%=f.password_field:password_confirmation,class:'form-control'%>
 <div class='radio_button'>
 <%=f.radio_button :kind, :'1'%>
 <%=f.label :kind, "ボランティア応募", {value: :'1', style: "display: inline-block;"} %><br>
