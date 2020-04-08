@@ -8,6 +8,13 @@
 <%=f.text_field:email,class:'form-control'%>
 <P>パスワード</P>
 <%=f.password_field:password,class:'form-control'%><br>
+<div class='radio_button'>
+<%=f.radio_button :kind, :'1'%>
+<%=f.label :kind, "ボランティア応募", {value: :'1', style: "display: inline-block;"} %><br>
+<%=f.radio_button :kind, :'2' %>
+<%=f.label :kind, "ボランティア募集", {value: :'2', style: "display: inline-block;"} %>
+</div>
+
 
 <%=f.submit 'ログイン',class:'form-control btn btn-primary'%>
 <%=link_to '新規登録', new_user_path%>
