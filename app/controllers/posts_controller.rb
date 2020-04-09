@@ -15,10 +15,18 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
+      flash[:success] = '応募完了しました。メールからの返信をお待ちください。' 
       redirect_to root_path
     end
   end
   
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to posts_path
+  end
+  
+  private
   def post_params
     params.require(:post).permit(:content,:task_id,:name,:old,:sex,:job,:email)
   end

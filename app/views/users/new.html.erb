@@ -1,10 +1,22 @@
+<% if @user.errors.any? %>
+  <div class="alert alert-warning">
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 
 <div class='container'>
+    
+    
 <div class='row new_users_form'>    
 <div class='new_user_form'>
 <h1>新規登録</h1>
     
-<%=form_with model: @user do |f|%>
+<%=form_with model: @user,local: true do |f|%>
 <p>名前</p>
 <%=f.text_field:name,class:'form-control'%>
 <p>メールアドレス</p>

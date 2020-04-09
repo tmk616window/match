@@ -14,6 +14,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     @task.save
+    flash[:success] = '投稿しました。' 
     redirect_to root_path
   end
 
