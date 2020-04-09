@@ -109,10 +109,9 @@ h1{
     background-color:white;
     max-width:75%;
     margin: 0 auto;
-    height: 190px;
     margin-top:20px;
     position:relative;
-    padding: 15px 15px 15px 15px;
+    padding: 15px 15px 0 15px;
 
 }
 
@@ -134,6 +133,15 @@ h1{
     float: left;
 }
 
+.tasks_index_time{
+    margin-top:13px;
+    text-align:right;
+}
+
+.tasks_index_time p{
+    font-size:12px;
+}
+
 .index_tasks_form{
 }
 
@@ -142,7 +150,7 @@ h1{
     height:150px;
     width: 230px;
     float:left;
-    margin-right: 10px;    
+    margin-right: 40px;    
 }
 
 .index_tasks{
