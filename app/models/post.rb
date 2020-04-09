@@ -5,5 +5,4 @@ class Post < ApplicationRecord
     validates :job, presence: true
     validates :email, presence: true
     validates :content, presence: true
-        
 end

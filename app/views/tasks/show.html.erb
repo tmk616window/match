@@ -22,7 +22,11 @@
 <br>
 <br>
 <br>
+<div class='tasks_show_button'>
 <h5><%=link_to 'このボランティアに応募する' ,post_path(@task.id), class:'btn btn-primary ,rows: 10'%></h5>
+<h5><%=link_to '編集' ,edit_task_path(@task.id), class:'btn btn-primary ,rows: 10'%></h5>
+<h5><%=link_to "消去", task_path(@task.id),method: :delete,class:'btn btn-danger',data: {confirm: "投稿を消去しますか？"}%></h5>
+</div>
         </div>
     </div>
 </div>
