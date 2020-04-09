@@ -6,7 +6,7 @@
 <%@tasks.each do |t|%>
 <div class='index_tasks_box '>
 <div class='index_tasks_image'>
-<p>box</p>
+<%=image_tag t.picture.url,width:'100%', height:'100%'%>
 </div>
 <div class='index_tasks_form'>
 <h5><%=t.name%></h5>
