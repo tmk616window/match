@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2020_04_08_082706) do
     t.string "station"
     t.string "address"
     t.integer "user_id"
+    t.string "picture"
   end
 
   create_table "users", force: :cascade do |t|

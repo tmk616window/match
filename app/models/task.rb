@@ -4,5 +4,5 @@ class Task < ApplicationRecord
     validates :time, presence: true
     validates :week, presence: true
     validates :content, presence: true
-    
+    mount_uploader :picture, ImageUploader
 end
