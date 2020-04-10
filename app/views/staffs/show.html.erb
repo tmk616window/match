@@ -1,1 +1,99 @@
-<h1>団体プロフィール</h1>
+<div class='container show_staff'>
+    <div class='row justify-content-center show_staff'>
+        <div class='col-7'>
+        <div class=' show_staff_form'>
+            <p><%=link_to "編集" ,edit_staff_path(@user.id), class:'btn btn-primary show_staff_edit_button'%></p>
+            <div class='show_staff_image'>
+                <p>image</p>
+            </div>
+            <div class='show_staff_message'>
+                <p>メッセージ</p>
+                <%=safe_join(@user.name.split("\n"),tag(:br))%>
+            </div>
+            <div class='show_staff_table'>
+                
+<table>
+    <tbody>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+         <tr>
+            <th>見出し</th>
+            <td>テキストが入ります</td>
+        </tr>
+         <tr>
+            <th>見出し</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>見出し</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>見出し</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+        <tr>
+            <th>団体名</th>
+            <td>テキストが入ります</td>
+        </tr>
+        
+    </tbody>
+</table>
+
+            </div>
+        </div>
+            
+        </div>
+        
+        <div class='col-4'>
+        <div class=' show_staff_tasks'>
+                <h2>投稿一覧</h2>
+             <%@tasks.each do |t|%>
+             <div class='show_staff_tasks_element'>
+             <a href="/tasks/<%=t.id%>"%><h3><%=t.name%></h3></a>
+             <p><%=t.created_at.strftime("%Y/%-m/%-d %-H時%-M分")%></p>
+            </div>
+             <%end%>
+        </div>
+            
+    </div>
+  </div>
+</div>
+
+
+
+    
+
+
+
+

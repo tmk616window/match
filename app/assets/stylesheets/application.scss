@@ -183,6 +183,8 @@ h1{
 
 .show_tasks_content{
     background-color:#FFFFBB;
+    word-break: break-all
+
 }
 
 .show_tasks_title p{
@@ -235,4 +237,100 @@ h1{
 .tasks_show_button h5{
     float: left;
     margin-left: 10px;
+}
+
+
+.posts_detail_content{
+    padding: 10px 10px 50px 10px;
+    background-color:InfoBackground;
+    word-break: break-all
+}
+.posts_detail_content h4 ,p{
+        margin:0;
+
+}
+
+.show_staff{
+    margin-top:50px;
+    margin-bottom:50px;
+
+}
+
+.show_staff_form{
+    border:solid 1px black;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:50px;
+}
+
+.show_staff_edit_button{
+    text-align:right;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.show_staff_image{
+    margin-top:30px;
+    width:95%;
+    height:300px;
+    margin:0 auto;
+    border: solid 1px black;
+}
+
+.show_staff_tasks{
+    border:solid 1px black;
+    display:block;
+	margin: 0 auto;
+    
+}
+
+.show_staff_tasks{
+    padding: 10px 10px 10px 10px;
+}
+
+.show_staff_message{
+    background-color:#FFFFBB;
+    word-break: break-all;
+    padding: 10px 10px 100px 10px ;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.show_staff_tasks_element{
+    border-bottom:solid 1px gray;
+}
+
+.show_staff_tasks_element h3{
+    color:black;
+    font-size:19px;
+}
+
+.show_staff_tasks_element p{
+    text-align:right;
+    font-size:12px;
+}
+
+.show_staff_table{
+    
+}
+
+
+
+.show_staff_table table {
+    border-collapse:  collapse; 
+    width:  100%;               
+}
+ 
+.show_staff_table th {
+    width:  100px;              
+    text-align: left;
+    background-color:#EEEEEE;
+    border: solid 1px;         
+
+}
+ 
+ 
+.show_staff_table td {
+    text-align: left;
+    border: solid 1px;         
 }

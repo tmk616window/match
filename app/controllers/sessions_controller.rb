@@ -18,7 +18,8 @@ class SessionsController < ApplicationController
   
   def destroy
     reset_session
-    redirect_to login_path ,notice: 'ログインしました'
+      flash[:danger] = 'ログアウトしました' 
+    redirect_to login_path 
   end
   
   private

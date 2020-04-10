@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.where(task_id: current_user.id)
+    @tasks = Task.where(params[:id])
   end
   
   def detail
@@ -25,6 +26,11 @@ class PostsController < ApplicationController
     @post.destroy
     redirect_to posts_path
   end
+  
+  def detail
+    @post = Post.find(params[:id])
+  end
+
   
   private
   def post_params
