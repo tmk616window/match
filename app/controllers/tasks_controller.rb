@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+      skip_before_action :authenticate_user, {only: [:index,:show]}
   def index
     @tasks = Task.page(params[:page]).per(2).order(id: "DESC")
   end

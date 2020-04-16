@@ -9,11 +9,12 @@
 <p>名前</p>
 <%=f.text_field:name,class:'form-control'%>
 <p >年齢</p>
-<%=f.text_field:old,class:'form-control'%>
-<%=f.radio_button :sex, :'1' %>
-<%=f.label :sex, "男性", {value: :'1', style: "display: inline-block;"} %>
-<%=f.radio_button :sex, :'2' %>
-<%=f.label :sex, "女性", {value: :'2', style: "display: inline-block;"} %>
+<%= f.number_field:old,min:10,max:100%>
+<P>性別</P>
+<%=f.radio_button :sex, :'男性' %>
+<%=f.label :sex, "男性", {value: :'男性', style: "display: inline-block;"} %>
+<%=f.radio_button :sex, :'女性' %>
+<%=f.label :sex, "女性", {value: :'女性', style: "display: inline-block;"} %>
 <p>コメント</p>
 <%=f.text_area:content,class:'form-control'%><br>
 <%=f.submit 'メッセージを送る' ,class:'form-control btn btn-primary'%>

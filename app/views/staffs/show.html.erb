@@ -2,13 +2,18 @@
     <div class='row justify-content-center show_staff'>
         <div class='col-7'>
         <div class=' show_staff_form'>
-            <p><%=link_to "編集" ,edit_staff_path(@user.id), class:'btn btn-primary show_staff_edit_button'%></p>
+            <p><%=link_to "編集" ,edit_user_path(@user), class:'btn btn-primary show_staff_edit_button'%></p>
             <div class='show_staff_image'>
-                <p>image</p>
+                  <% if @user.icon? %>
+                    <%= image_tag @user.icon.url, width:'100%',height:'100%' %>
+                  <% else %>
+                      <p>画像なし</p>
+                  <% end %>
+
             </div>
             <div class='show_staff_message'>
                 <p>メッセージ</p>
-                <%=safe_join(@user.name.split("\n"),tag(:br))%>
+                <%=safe_join(@user.user_message.split("\n"),tag(:br))%>
             </div>
             <div class='show_staff_table'>
                 
@@ -16,57 +21,16 @@
     <tbody>
         <tr>
             <th>団体名</th>
-            <td>テキストが入ります</td>
+            <td><%=@user.organization_name%></td>
         </tr>
          <tr>
-            <th>見出し</th>
-            <td>テキストが入ります</td>
+            <th>住所</th>
+            <td><%=@user.user_address%></td>
         </tr>
          <tr>
-            <th>見出し</th>
-            <td>テキストが入ります</td>
+            <th>設立日</th>
+            <td><%=@user.born%></td>
         </tr>
-        <tr>
-            <th>見出し</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>見出し</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>団体名</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>団体名</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>団体名</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>団体名</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>団体名</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>団体名</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>団体名</th>
-            <td>テキストが入ります</td>
-        </tr>
-        <tr>
-            <th>団体名</th>
-            <td>テキストが入ります</td>
-        </tr>
-        
     </tbody>
 </table>
 

@@ -1,8 +1,4 @@
 class Task < ApplicationRecord
-    validates :name, presence: true
-    validates :address, presence: true
-    validates :time, presence: true
-    validates :week, presence: true
-    validates :content, presence: true
     mount_uploader :picture, ImageUploader
+    has_many :posts, dependent: :destroy
 end

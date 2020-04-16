@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+      skip_before_action :authenticate_user, {only: [:new,:create]}
   def show
   end
 
@@ -7,7 +8,18 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(params[:id])
   end
+  
+  def update
+    @user = User.find(params[:id])
+    if @user.update!(user_params)
+      redirect_to staff_url(@user)
+    else
+      render 'edit'
+    end
+  end
+  
   
   def create
     @user = User.new(user_params)
@@ -19,6 +31,6 @@ class UsersController < ApplicationController
   end
   
   def user_params
-    params.require(:user).permit(:name,:email,:password,:password_confirmation,:kind)
+    params.require(:user).permit(:name,:email,:password,:password_confirmation,:kind,:organization_name,:user_address,:born,:user_message,:icon)
   end
 end

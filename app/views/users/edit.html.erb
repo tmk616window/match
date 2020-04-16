@@ -1,2 +1,22 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>プロフィール</h1>
+
+
+
+<%=form_with model: @user,local: true do |f|%>
+<p>画像</p>
+<%= f.file_field :icon %>
+
+<p>団体名</p>
+<%=f.text_field:organization_name%>
+<p>住所</p>
+<%=f.text_field:user_address%>
+<p>設立日</p>
+<%=f.text_field:born%>
+
+<br>
+
+<p>メッセージ</p>
+<%=f.text_area:organization_name%>
+
+<%=f.submit '登録完了'%>
+<%end%>

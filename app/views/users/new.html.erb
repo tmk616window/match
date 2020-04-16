@@ -17,6 +17,11 @@
 <h1>新規登録</h1>
     
 <%=form_with model: @user,local: true do |f|%>
+<%= f.hidden_field :user_address, value: '空欄です。' %>
+<%= f.hidden_field :born, value: '空欄です。' %>
+<%= f.hidden_field :user_message, value: '空欄です。' %>
+<%= f.hidden_field :icon, value: '挿入されていません。' %>
+<%= f.hidden_field :organization_name, value: '空欄です。' %>
 <p>名前</p>
 <%=f.text_field:name,class:'form-control'%>
 <p>メールアドレス</p>

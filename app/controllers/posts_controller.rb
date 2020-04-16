@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.where(task_id: current_user.id)
+    @posts = Post.where(task_id: current_user.id).order(id: "DESC")
     @tasks = Task.where(params[:id])
   end
   
